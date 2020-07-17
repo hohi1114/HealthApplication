@@ -9,12 +9,15 @@ import android.os.Bundle;
 
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -74,8 +77,19 @@ public class MyPage extends Fragment {
         // Inflate the layout for this fragment
         LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.fragment_my_page, container, false);
         ImageView plus = (ImageView)layout.findViewById(R.id.plus);
+        ImageButton history=(ImageButton)layout.findViewById(R.id.walk_history);
 
-
+        history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment fragment=new RecyclerViewFragment();
+                FragmentManager fragmentManager= getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.content_frame, fragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
         plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -83,6 +97,9 @@ public class MyPage extends Fragment {
 
             }
         });
+
+
+
 
         return layout;
     }

@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MyPage"
+    android:id="@+id/content_frame"
     android:orientation="vertical">
+
 
     <LinearLayout
         android:id="@+id/user"
@@ -13,8 +16,50 @@
         android:layout_weight="1"
         android:orientation="vertical">
 
-    </LinearLayout>
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginLeft="131dp"
+            android:src="@drawable/image1"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#000000"/>
+       />
 
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="150dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="150dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="20dp"
+            android:text="TextView" />
+
+        <ImageButton
+            android:id="@+id/walk_history"
+            android:layout_width="66dp"
+            android:layout_height="54dp"
+
+            android:scaleType="fitXY"
+            android:src="@drawable/plus"
+            android:layout_marginLeft="348dp" />
+    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"

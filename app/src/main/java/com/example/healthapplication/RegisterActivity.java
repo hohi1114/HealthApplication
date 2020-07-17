@@ -1,3 +1,4 @@
+/*
 package com.example.healthapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,3 +13,5 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
     }
 }
+
+ */

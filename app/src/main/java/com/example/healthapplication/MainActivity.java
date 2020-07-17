@@ -21,9 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         final TabLayout tabLayout = findViewById(R.id.tabBar);
-        TabItem tab1 = findViewById(R.id.tab1);
-        TabItem tab2 = findViewById(R.id.tab2);
-        TabItem tab3 = findViewById(R.id.tab3);
+
         final ViewPager viewPager = findViewById(R.id.viewPager);
 
         // 각 탭에 아이콘 추가
