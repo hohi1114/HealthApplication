@@ -58,7 +58,7 @@
 
             android:scaleType="fitXY"
             android:src="@drawable/plus"
-            android:layout_marginLeft="348dp" />
+            android:layout_marginLeft="250dp" />
     </LinearLayout>
 
     <RelativeLayout

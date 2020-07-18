@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
                 case 1:
                     return new Routes();
                 case 2:
-                    return new Walk();
+                    return new MapsFragment();
                 default:
                     return null;
             }
